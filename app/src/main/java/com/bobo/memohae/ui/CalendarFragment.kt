@@ -1,4 +1,4 @@
-package com.bobo.memohae.fragments
+package com.bobo.memohae.ui
 
 import androidx.fragment.app.Fragment
 

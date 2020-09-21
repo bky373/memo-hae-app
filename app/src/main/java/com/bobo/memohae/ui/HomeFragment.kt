@@ -1,4 +1,4 @@
-package com.bobo.memohae.fragments
+package com.bobo.memohae.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.bobo.memohae.R
 import com.bobo.memohae.adapters.*
 import com.bobo.memohae.databinding.FragmentHomeBinding
@@ -17,7 +18,8 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val binding: FragmentHomeBinding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         val tabLayout = binding.tabs
         val viewPager = binding.viewPager
 
