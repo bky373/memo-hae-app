@@ -7,12 +7,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.bobo.memohae.R
+import com.bobo.memohae.adapters.TaskAdapter
 import com.bobo.memohae.databinding.FragmentTaskBinding
-import com.bobo.memohae.viewmodels.TaskViewModel
 
 class TaskFragment : Fragment() {
-
-    private lateinit var viewModel : TaskViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +20,9 @@ class TaskFragment : Fragment() {
 
         val binding: FragmentTaskBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_task, container, false)
+
+        val adapter = TaskAdapter()
+        binding.tasksRv.adapter = adapter
 
         return binding.root
     }

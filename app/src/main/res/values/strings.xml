@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">메모메모해</string>
+    <string name="write_your_memo">메모를 입력해주세요</string>
 </resources>
