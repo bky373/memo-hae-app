@@ -2,10 +2,10 @@ package com.bobo.memohae.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.bobo.memohae.fragments.BinFragment
-import com.bobo.memohae.fragments.CalendarFragment
-import com.bobo.memohae.fragments.FolderFragment
-import com.bobo.memohae.fragments.TaskFragment
+import com.bobo.memohae.ui.BinFragment
+import com.bobo.memohae.ui.CalendarFragment
+import com.bobo.memohae.ui.FolderFragment
+import com.bobo.memohae.ui.TaskFragment
 
 const val TASK_PAGE_INDEX = 0
 const val FOLDER_PAGE_INDEX = 1

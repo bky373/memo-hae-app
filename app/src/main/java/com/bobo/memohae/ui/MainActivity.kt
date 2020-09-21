@@ -1,14 +1,17 @@
-package com.bobo.memohae
+package com.bobo.memohae.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.bobo.memohae.R
 import com.bobo.memohae.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        DataBindingUtil.setContentView<ActivityMainBinding>(this,
+            R.layout.activity_main
+        )
     }
 }
