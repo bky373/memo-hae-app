@@ -1,5 +1,6 @@
 package com.bobo.memohae.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.bobo.memohae.R
 import com.bobo.memohae.adapters.TaskAdapter
 import com.bobo.memohae.databinding.FragmentTaskBinding
@@ -48,8 +50,18 @@ class TaskFragment : Fragment() {
 
         viewModelAdapter = TaskAdapter()
 
-        binding.tasksRv.adapter = viewModelAdapter
+        binding.tasksRv.apply {
+            adapter = viewModelAdapter
+            addItemDecoration(getItemDivider())
+        }
 
         return binding.root
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private fun getItemDivider(): DividerItemDecoration {
+        val itemDivider = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
+        context?.getDrawable(R.drawable.rv_divider)?.let { itemDivider.setDrawable(it) }
+        return itemDivider
     }
 }

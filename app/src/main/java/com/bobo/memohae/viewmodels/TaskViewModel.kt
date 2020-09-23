@@ -10,7 +10,8 @@ class TaskViewModel(application: Application) : AndroidViewModel(application) {
 
     private val dataSource = TaskDatabase.getDatabase(application).taskDatabaseDao
 
-    val tasks: LiveData<List<Task>> = dataSource.getAllTasks()
+//    val tasks: LiveData<List<Task>> = dataSource.getAllTasks()
+    val tasks: LiveData<List<Task>> = MutableLiveData(listOf(Task(content = "메모1"), Task(content = "메모2")))
 
     class Factory(val app: Application) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {

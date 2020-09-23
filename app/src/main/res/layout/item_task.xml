@@ -15,15 +15,14 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_eight"
         android:backgroundTint="@color/white"
         app:cardCornerRadius="2dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_sixteen"
-            android:layout_marginBottom="@dimen/margin_sixteen">
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:layout_marginBottom="@dimen/margin_twenty">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/left_guideline"
@@ -43,7 +42,8 @@
                 android:id="@+id/task_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginStart="@dimen/margin_twenty_seven"
+                android:layout_marginEnd="@dimen/margin_thirty_two"
                 android:hint="@string/write_your_memo"
                 android:text="@{task.content}"
                 android:textColor="@color/black"
