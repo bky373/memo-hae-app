@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.bobo.memohae.domain.Task
 
+@Dao
 interface TaskDatabaseDao {
 
     @Insert
@@ -16,7 +17,10 @@ interface TaskDatabaseDao {
     fun delete(task: Task)
 
     @Query("SELECT * FROM task_table WHERE taskId = :key")
-    fun getTask(key: String): Task?
+    fun getTaskWithId(key: Long): Task?
+
+    @Query("SELECT * FROM task_table ORDER BY taskId DESC LIMIT 1")
+    fun getLastTask(): Task?
 
     @Query("SELECT * FROM task_table ORDER BY taskId DESC")
     fun getAllTasks(): LiveData<List<Task>>
